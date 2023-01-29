@@ -14,7 +14,7 @@ public class xorFrom1toN {
             ans= n+1;
         }
         else if(x==3){
-            ans= 1;
+            ans= 0;
         }
         return ans;
     }
