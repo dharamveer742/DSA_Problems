@@ -29,7 +29,7 @@ public class leftMostRepeatingCharacter {
 
     public static void main(String[] args) {
         leftMostRepeatingCharacter ob = new leftMostRepeatingCharacter();
-        String s ="asbcdbcbj";
+        String s ="abccbd";  //
         System.out.println((ob.findLeftMostRepeating(s)));
     }
 }
