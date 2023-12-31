@@ -22,7 +22,7 @@ public class printAllPermutations {
     }
 
     public static void main(String[] args) {
-        String s1 = "ABC";
+        String s1 = "ABCD";
         StringBuilder s = new StringBuilder(s1);
         permutations(s,0);
     }
