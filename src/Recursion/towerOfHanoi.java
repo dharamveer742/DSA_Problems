@@ -11,6 +11,7 @@ public class towerOfHanoi {
         System.out.println("moving plate "+n +" from " + source + " to "+destination );
         tower(helper,destination,source,n-1);
     }
+
     public static int towerSteps(String source, String destination, String helper,int n){
         if(n==1){
             System.out.println("moving plate "+n +" from " + source + " to "+destination );
