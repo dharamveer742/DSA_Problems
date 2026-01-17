@@ -52,6 +52,24 @@ public class _09MCM {
         return memo[i][j];
     }
 
+    public static int matrixMultiplication(int[] arr , int N) {
+        int[][] dp = new int[N][N];
+        for(int i=1;i<N;i++){
+            dp[i][i]=0;
+        }
+        for(int i=N-1;i>=1;i--){
+            for(int j=i+1;j<N;j++){
+                int minCost = Integer.MAX_VALUE;
+                for(int k=i;k<j;k++){
+                    minCost=Math.min(minCost,dp[i][k]+dp[k+1][j]+arr[i-1]*arr[k]*arr[j]);
+                }
+                dp[i][j]=minCost;
+            }
+
+        }
+        return dp[1][N-1];
+    }
+
 
 
     public static void main(String[] args) {
