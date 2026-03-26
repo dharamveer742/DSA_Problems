@@ -1,4 +1,4 @@
-package Array.Striver;
+package Array.Striver.Medium;
 
 public class dnf {
     public void sortColors(int[] nums) {
