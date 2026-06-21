@@ -21,4 +21,43 @@ public class _6HashingOptimisation {
         }
         return maxLen;
     }
+
+    // Longest repeating char replacement  
+
+    public int characterReplacement(String s, int k) {
+
+        int[] freq = new int[26];
+
+        int maxFreq=0;
+
+        int windowStart = 0;
+
+        int windowEnd =0;
+
+        int ans =0;
+
+        while(windowEnd<s.length()){
+
+            freq[s.charAt(windowEnd)-'A']++;
+
+            maxFreq = Math.max(maxFreq,freq[s.charAt(windowEnd)-'A']);
+
+            while(windowEnd-windowStart+1-maxFreq>k){
+
+                freq[s.charAt(windowStart)-'A']--;
+
+                windowStart++;
+
+            }
+
+            ans=Math.max(ans,windowEnd-windowStart+1);
+
+            windowEnd++;
+
+        }
+
+        return ans;
+
+    }
+
 }
